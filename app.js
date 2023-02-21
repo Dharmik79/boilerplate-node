@@ -26,6 +26,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 app.options("*", cors());
 
+// Authentication middleware
+app.use(passport.initialize());
+app.use(passport.session());
+require("./config/passport")(passport);
+
 
 server.listen(process.env.PORT, () => {
   console.log(`your application is running on ${process.env.PORT}`);
