@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-  "start":"nodemon app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "fs": "^0.0.1-security",
     "helmet": "^6.0.1",
     "i18next": "^22.4.10",
+    "joi": "^17.8.3",
     "lodash": "^4.17.21",
     "moment-timezone": "^0.5.40",
     "morgan": "^1.10.0",
