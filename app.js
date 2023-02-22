@@ -32,6 +32,9 @@ app.use(passport.session());
 require("./config/passport")(passport);
 
 
+// connecting to the database
+require("./config/db");
+
 server.listen(process.env.PORT, () => {
   console.log(`your application is running on ${process.env.PORT}`);
 });
