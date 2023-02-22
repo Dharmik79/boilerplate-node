@@ -1,3 +1,4 @@
+const user = require("../model/user");
 const createDocument = (model, data) =>
   new Promise((resolve, reject) => {
     model.create(data, (err, result) => {
@@ -65,6 +66,12 @@ const findOneAndDeleteDocument = (model, filter, options = {new:true}) =>
     });
   });
 
+const findUser = async (email) => {
+  const findUser = await user.findOne({
+    email: email,
+  });
+  return findUser;
+};
 
 module.exports = {
   createDocument,
@@ -75,4 +82,5 @@ module.exports = {
   getDocumentByQuery,
   findOneAndUpdateDocument,
   findOneAndDeleteDocument,
+  findUser,
 };
